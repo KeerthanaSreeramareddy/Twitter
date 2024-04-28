@@ -1,0 +1,10 @@
+{% extends 'templates/base.html' %}
+{% block content %}
+<ul>
+    {% for topic in topics %}
+         <li><a href="{{ topic.url }}">{{ topic.name }}</a> - {{ topic.tweet_volume }}</li>
+    {% empty %}
+         <h2>Cannot get trending topics</h2>
+    {% endfor %}
+</ul>
+{% endblock content %}

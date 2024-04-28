@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+        <script id="address-template" type="text/x-handlebars-template">
+            <div id="root">
+                <div class="container">
+                   <h1>Twitter</h1>
+                    <img src="https://media4.picsearch.com/is?hKRvtmV5fkytk1YOR6ctallcHQekPsiyJHoIaD1IKZM&height=150"></div>
+                    {{#each arr.topics}}
+                    <div class="card">
+                        <p>{{this.name}}</p>
+                        <p>{{this.url}}</p>
+                        <a href="{{this.url}}">{{this.url}}</a>
+                        <p>{{this.query}}</p>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </script>
+            <div class="content-placeholder"></div>
+            <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+            <script src="api1.js"></script>
+</body>
+</html>
